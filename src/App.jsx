@@ -48,6 +48,29 @@ const calendar = [
   },
 ];
 
+const emails = [
+  {
+    id: "email-01",
+    title: "Reporte de resultados",
+  },
+  {
+    id: "email-02",
+    title: "Requisitos para cambio",
+  },
+  {
+    id: "email-03",
+    title: "Estatus de funcionalidad",
+  },
+  {
+    id: "email-04",
+    title: "Próximos eventos",
+  },
+  {
+    id: "email-05",
+    title: "participa en la encuesta",
+  },
+];
+
 function App() {
   const [data, setData] = useState([...people, ...calendar, ...emails]);
 
