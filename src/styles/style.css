@@ -120,6 +120,9 @@ p {
 }
 
 @media screen and (max-width: 700px) {
+  /* .c-buttons {
+    width: 100%;
+  } */
   .container-search {
     width: auto;
   }

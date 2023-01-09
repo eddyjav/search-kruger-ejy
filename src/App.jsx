@@ -122,6 +122,7 @@ function App() {
           width="50"
         />
         <h2>ruugle</h2>
+        <small className="text-muted">Search</small>
       </div>
       <hr />
 
