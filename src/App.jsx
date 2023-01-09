@@ -111,24 +111,50 @@ function App() {
   };
 
   return (
-    <div>
-      <button className="button-cat" onClick={handleClick} name="all">
-        All
-      </button>
-      <button className="button-cat" onClick={handleClick} name="productos">
-        Products
-      </button>
-      <button className="button-cat" onClick={handleClick} name="countries">
-        Countries
-      </button>
-      <button className="button-cat" onClick={handleClick} name="names">
-        Names
-      </button>
+    <div className="container-search">
+      <div className="c-buttons">
+        <button
+          className="buttonCreate btn btn-warning mt-2 btn-block"
+          onClick={handleClick}
+          name="all"
+        >
+          All
+        </button>
+        <button
+          className="buttonCreate btn btn-warning mt-2 btn-block"
+          onClick={handleClick}
+          name="productos"
+        >
+          Products
+        </button>
+        <button
+          className="buttonCreate btn btn-warning mt-2 btn-block"
+          onClick={handleClick}
+          name="countries"
+        >
+          Countries
+        </button>
+        <button
+          className="buttonCreate btn btn-warning mt-2 btn-block"
+          onClick={handleClick}
+          name="names"
+        >
+          Names
+        </button>
+      </div>
 
       {selection ? (
-        <div>
-          You selected: {selection.title} - {selection.priceKg} {"u/kg"} /{" "}
-          {selection.presentation} - {selection.pricePresentation}
+        <div className="c-legends">
+          <p>
+            <b>You selected</b>{" "}
+          </p>
+          <p>
+            <b>{selection.title}</b>
+            <br />
+            <b> {"Unid. - Kg. :"}</b> {selection.priceKg}$
+            <br /> <b>{selection.presentation}: </b>
+            {selection.pricePresentation}$
+          </p>
         </div>
       ) : (
         ""

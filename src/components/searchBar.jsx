@@ -2,7 +2,7 @@ import { useState } from "react";
 import Results from "./results";
 
 const SearchBar = ({ items, onItemSelected }) => {
-  const [query, setQuery] = useState("al");
+  const [query, setQuery] = useState("ecu");
   const [results, setResults] = useState([]);
 
   const handleChange = (e) => {
@@ -16,7 +16,14 @@ const SearchBar = ({ items, onItemSelected }) => {
 
   return (
     <div className="d-search">
-      {results && <div>{results.length} results</div>}
+      <p className="p-result">
+        {results && (
+          <div>
+            <b>{results.length} results</b>{" "}
+          </div>
+        )}
+      </p>
+
       <input
         className="i-search"
         type="text"
