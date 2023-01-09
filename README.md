@@ -2,7 +2,7 @@
 <img src='src/img/logoKrB.png' width='100px'>
 </p>
 
-<h1 align="center"> Book Library</h1>
+<h1 align="center"> Search App</h1>
 
 - In this repository you will find an app to create a Search engine, the purpose is to apply **useMemo**.
 
