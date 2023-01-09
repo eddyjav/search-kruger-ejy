@@ -25,7 +25,7 @@ const MarkedItem = ({ item, query, onClick }) => {
   };
 
   return (
-    <button className="resultBotton" onClick={handleClick}>
+    <a href="#" className="resultBotton" onClick={handleClick}>
       {left}
       <span
         className="s-search"
@@ -34,7 +34,7 @@ const MarkedItem = ({ item, query, onClick }) => {
         {center}
       </span>
       {right}
-    </button>
+    </a>
   );
 };
 
