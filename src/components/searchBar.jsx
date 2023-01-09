@@ -7,7 +7,7 @@ const SearchBar = ({ items, onItemSelected }) => {
 
   const handleChange = (e) => {
     const value = e.target.value;
-    setQuery(value);
+    setQuery(value.toLowerCase()); //! To better search LowerCase
   };
 
   const handleResults = (items) => {
@@ -15,9 +15,14 @@ const SearchBar = ({ items, onItemSelected }) => {
   };
 
   return (
-    <div>
+    <div className="d-search">
       {results && <div>{results.length} results</div>}
-      <input type="text" onChange={handleChange} value={query} />
+      <input
+        className="i-search"
+        type="text"
+        onChange={handleChange}
+        value={query}
+      />
       <Results
         items={items}
         onItemSelected={onItemSelected}

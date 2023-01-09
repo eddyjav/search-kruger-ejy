@@ -1,29 +1,30 @@
 import { useState } from "react";
 import SearchBar from "./components/searchBar";
-// import "./App.css";
+import { productos } from "./data";
+import "./styles/style.css";
 
-const people = [
-  {
-    id: "peolpe-01",
-    title: "Juan Perez",
-  },
-  {
-    id: "peolpe-02",
-    title: "Andres Paez",
-  },
-  {
-    id: "peolpe-03",
-    title: "Noemi Saenz",
-  },
-  {
-    id: "peolpe-04",
-    title: "Alvaro Portes",
-  },
-  {
-    id: "peolpe-05",
-    title: "Jose Vieunza",
-  },
-];
+// const  = [
+//   {
+//     id: "peolpe-01",
+//     title: "Juan Perez",
+//   },
+//   {
+//     id: "peolpe-02",
+//     title: "Andres Paez",
+//   },
+//   {
+//     id: "peolpe-03",
+//     title: "Noemi Saenz",
+//   },
+//   {
+//     id: "peolpe-04",
+//     title: "Alvaro Portes",
+//   },
+//   {
+//     id: "peolpe-05",
+//     title: "Jose Vieunza",
+//   },
+// ];
 
 const calendar = [
   {
@@ -72,7 +73,7 @@ const emails = [
 ];
 
 function App() {
-  const [data, setData] = useState([...people, ...calendar, ...emails]);
+  const [data, setData] = useState([...productos, ...calendar, ...emails]);
 
   const [selection, setSelection] = useState(null);
   const [currentOption, setCurrentOption] = useState("all");
@@ -82,12 +83,12 @@ function App() {
 
     switch (op) {
       case "all":
-        setData([...people, ...calendar, ...emails]);
+        setData([...productos, ...calendar, ...emails]);
         setCurrentOption("all");
         break;
-      case "people":
-        setData([...people]);
-        setCurrentOption("people");
+      case "productos":
+        setData([...productos]);
+        setCurrentOption("productos");
         break;
       case "calendar":
         setData([...calendar]);
@@ -109,16 +110,16 @@ function App() {
 
   return (
     <div>
-      <button onClick={handleClick} name="all">
+      <button className="button-cat" onClick={handleClick} name="all">
         All
       </button>
-      <button onClick={handleClick} name="people">
-        People
+      <button className="button-cat" onClick={handleClick} name="productos">
+        productos
       </button>
-      <button onClick={handleClick} name="calendar">
+      <button className="button-cat" onClick={handleClick} name="calendar">
         Calendar
       </button>
-      <button onClick={handleClick} name="emails">
+      <button className="button-cat" onClick={handleClick} name="emails">
         Emails
       </button>
 

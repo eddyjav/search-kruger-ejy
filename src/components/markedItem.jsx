@@ -25,9 +25,12 @@ const MarkedItem = ({ item, query, onClick }) => {
   };
 
   return (
-    <button onClick={handleClick}>
+    <button className="resultBotton" onClick={handleClick}>
       {left}
-      <span style={{ fontWeight: "bolder", backgroundColor: "yellow" }}>
+      <span
+        className="s-search"
+        style={{ fontWeight: "bolder", backgroundColor: "yellow" }}
+      >
         {center}
       </span>
       {right}

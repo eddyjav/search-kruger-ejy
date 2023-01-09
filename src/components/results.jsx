@@ -21,11 +21,11 @@ const Results = ({ items, onItemSelected, query, onResultsCalculated }) => {
   }
 
   return (
-    <div>
+    <div className="d-result">
       {query !== ""
         ? filterItems.map((item) => (
             <MarkedItem
-              key={item.id}
+              key={crypto.randomUUID()}
               item={item}
               onClick={onItemSelected}
               query={query}
