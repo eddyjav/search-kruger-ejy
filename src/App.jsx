@@ -110,8 +110,41 @@ function App() {
     setSelection(item);
   };
 
+  //!ToSee if include in Array/const console.log(countries?.includes(selection));
+
   return (
     <div className="container-search">
+      <div className="title-t">
+        <img
+          className="logo-k"
+          src="/logoKrB.png"
+          alt="logokruger"
+          width="50"
+        />
+        <h2>ruugle</h2>
+      </div>
+      <hr />
+
+      {selection ? (
+        <div className="c-legends">
+          <p>
+            <b>You selected</b>{" "}
+          </p>
+          {productos.includes(selection) ? (
+            <p>
+              <b>👉 {selection.title} 👈</b>
+              <br />
+              <b> {"Unid. - Kg. :"}</b> {selection.priceKg}$
+              <br /> <b>{selection.presentation}: </b>
+              {selection.pricePresentation}$
+            </p>
+          ) : (
+            <b>👉 {selection.title} 👈</b>
+          )}
+        </div>
+      ) : (
+        ""
+      )}
       <div className="c-buttons">
         <button
           className="buttonCreate btn btn-warning mt-2 btn-block"
@@ -142,23 +175,6 @@ function App() {
           Names
         </button>
       </div>
-
-      {selection ? (
-        <div className="c-legends">
-          <p>
-            <b>You selected</b>{" "}
-          </p>
-          <p>
-            <b>{selection.title}</b>
-            <br />
-            <b> {"Unid. - Kg. :"}</b> {selection.priceKg}$
-            <br /> <b>{selection.presentation}: </b>
-            {selection.pricePresentation}$
-          </p>
-        </div>
-      ) : (
-        ""
-      )}
 
       <SearchBar items={data} onItemSelected={handleItemSelected} />
     </div>

@@ -29,7 +29,7 @@ const MarkedItem = ({ item, query, onClick }) => {
       {left}
       <span
         className="s-search"
-        style={{ fontWeight: "bolder", backgroundColor: "yellow" }}
+        style={{ fontWeight: "bolder", backgroundColor: "#fd7d14d2" }}
       >
         {center}
       </span>

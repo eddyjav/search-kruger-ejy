@@ -2,7 +2,7 @@ import { useState } from "react";
 import Results from "./results";
 
 const SearchBar = ({ items, onItemSelected }) => {
-  const [query, setQuery] = useState("ecu");
+  const [query, setQuery] = useState("");
   const [results, setResults] = useState([]);
 
   const handleChange = (e) => {
@@ -16,19 +16,20 @@ const SearchBar = ({ items, onItemSelected }) => {
 
   return (
     <div className="d-search">
-      <p className="p-result">
-        {results && (
-          <div>
-            <b>{results.length} results</b>{" "}
-          </div>
-        )}
-      </p>
+      {results && (
+        <p className="p-result">
+          {" "}
+          <b>{results.length} results</b>
+        </p>
+      )}
 
       <input
         className="i-search"
         type="text"
         onChange={handleChange}
         value={query}
+        placeholder="Puedes buscar Productos, Paises o Nombres"
+        autoFocus
       />
       <Results
         items={items}

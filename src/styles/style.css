@@ -1,7 +1,8 @@
 body {
-  /* margin: 10px; */
+  background-color: #efefef;
 }
 .container-search {
+  margin-top: 40px;
   position: relative;
   margin-left: auto;
   margin-right: auto;
@@ -17,6 +18,21 @@ body {
   width: 100%;
   display: flex;
   justify-content: center;
+}
+
+.title-t {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+}
+.logo-k {
+  margin-top: -32px;
+}
+
+h2 {
+  margin-left: -18px;
+  font-family: "Poppins", sans-serif;
 }
 
 .button-cat {
@@ -65,7 +81,7 @@ body {
 }
 
 .s-search {
-  background-color: yellow;
+  background-color: #fd7e14;
   font-weight: bolder;
   border-radius: 2px;
 }
@@ -78,7 +94,7 @@ body {
 }
 
 .resultBotton:hover {
-  background-color: #4c91ba;
+  background-color: #fd7e14;
   color: white;
 }
 .resultBotton:hover span {
@@ -87,6 +103,7 @@ body {
 
 .p-result {
   text-align: center;
+  margin: auto;
 }
 
 .btn-warning {
@@ -96,6 +113,10 @@ body {
 
 .btn-warning:hover {
   background-color: #fd7d14d2;
+}
+
+p {
+  margin: auto;
 }
 
 @media screen and (max-width: 700px) {
